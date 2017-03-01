@@ -1,0 +1,29 @@
+{
+  "name": "zip-animation",
+  "version": "0.0.0",
+  "description": "node module starter kit",
+  "main": "src/script.js",
+  "authors": [
+    "IWABUCHI Yuuki <k38647@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "starterkit"
+  ],
+  "homepage": "https://github.com/butchi/zip-animation",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "generator",
+    "assets",
+    "index.html",
+    "ogp.png",
+    "favicon.ico"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
