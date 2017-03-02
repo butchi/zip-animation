@@ -13,7 +13,7 @@ import watch from 'gulp-watch';
 
 
 // const
-const APP = 'script';
+const APP = 'zip-animation';
 const SRC = './src';
 const HTDOCS = './docs';
 const DEST = './dist';
@@ -30,7 +30,9 @@ gulp.task('browserify', () => {
 
 gulp.task('minify', () => {
   return gulp.src(`${DEST}/${APP}.js`)
-    .pipe(uglify({}))
+    .pipe(uglify({
+      preserveComments: 'license',
+    }))
     .pipe(rename(`${APP}.min.js`))
     .pipe(gulp.dest(`${DEST}`))
   ;
@@ -39,7 +41,8 @@ gulp.task('minify', () => {
 gulp.task('deco', () => {
   return gulp.src(`${DEST}/${APP}.js`)
     .pipe(decodecode({
-      decoArr: ['b', 'u', 't', 'c', 'h', 'i'],
+      preserveComments: 'license',
+      decoArr: ['a', 'n', 'i', 'm'],
     }))
     .pipe(rename(`${APP}.deco.js`))
     .pipe(gulp.dest(`${DEST}`))
